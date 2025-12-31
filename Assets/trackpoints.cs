@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class trackpoints : MonoBehaviour
 {
-    private int point = 0;
+    private int points = 0;
 
     public void IncreasePoints()
     {
-        IncreasePoints = points + 1;
+        points = points + 1;
     }
 }
