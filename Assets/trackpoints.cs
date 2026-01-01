@@ -1,11 +1,26 @@
+using TMPro;
 using UnityEngine;
 
 public class trackpoints : MonoBehaviour
 {
-    private int points = 0;
+    private int point = 0;
+    public TextMeshProUGUI pointsText;
+
+    public void PrintPoints()
+    {
+        Debug.Log(point);
+
+
+        pointsText.text = point.ToString();
+    }
+    public void ResetPoints()
+    {
+        point = 0;
+        PrintPoints();
+    }
 
     public void IncreasePoints()
     {
-        points = points + 1;
+        point = point + 1;
     }
 }

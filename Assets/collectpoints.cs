@@ -8,10 +8,17 @@ public class collectpoints : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "throwable")
-        {
-            pointsystem.IncreasePoints();
-        }
+      
 
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "throwable")
+        {
+            Destroy(collision.gameObject);
+            pointsystem.IncreasePoints();
+            pointsystem.PrintPoints();                                 
+        }
+    }
 }
+-
